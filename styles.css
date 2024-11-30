@@ -1,0 +1,94 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5f5f5;
+  }
+  
+  .menu-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+  
+  .menu-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .center-logo {
+    text-justify: center;
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .menu-wheel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu-item {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    transform-origin: 50% calc(50% + 180px);
+    transform: rotate(var(--angle));
+    text-align: center;
+  }
+  
+  .menu-item span {
+    display: block;
+    transform: rotate(calc(-1 * var(--angle)));
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(calc(var(--angle) + 90deg));
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid #fff;
+    margin-top: -90px; /* Adjust the arrow's position outward */
+  }
+  
+  /* Arrow hover effect */
+  .menu-item:hover .arrow {
+    border-top-color: #3498db; /* Changes color on hover */
+  }
+
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  
+  .red { background: #e74c3c; }
+  .orange { background: #e67e22; }
+  .yellow { background: #f1c40f; }
+  .green { background: #2ecc71; }
+  .blue { background: #3498db; }
+  .purple { background: #9b59b6; }
+  .pink { background: #fd79a8; }
+  .navy { background: #34495e; }
+  .indigo { background: #6c5ce7; }
+  
